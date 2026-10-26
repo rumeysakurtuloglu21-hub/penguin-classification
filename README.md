@@ -1,53 +1,66 @@
-# 🐧 Penguin Classification
+# 🐧 Penguen Türü Sınıflandırması
 
-A machine learning web application that predicts penguin species using the Palmer Penguins dataset.
+Palmer Penguins veri setini kullanarak fiziksel ölçümler ve kategorik özellikler üzerinden penguen türlerini tahmin eden bir **derin öğrenme web uygulaması**.
 
-## ✨ Features
+## ✨ Özellikler
 
-- Predicts penguin species based on physical measurements.
-- Provides a React-based user interface.
-- Uses a FastAPI backend to serve predictions.
-- Applies preprocessing with a trained scaler.
-- Features an aurora-inspired background.
+- Fiziksel ölçümler ve kategorik özelliklerden penguen türü tahmini yapar.
+- PyTorch ile eğitilmiş bir sinir ağı modelini kullanır.
+- React tabanlı bir kullanıcı arayüzü sunar.
+- Model tahminlerini FastAPI aracılığıyla sunar.
+- Eğitilmiş bir ölçekleyici ile verileri ön işler.
+- Kutup ışıklarından ilham alan bir arayüz tasarımına sahiptir.
 
-## 🛠️ Technologies
+## 🛠️ Kullanılan Teknolojiler
 
-**Machine Learning**
+**Derin Öğrenme ve Veri İşleme**
 - Python
 - PyTorch
+- Pandas
+- NumPy
 - scikit-learn
-- Palmer Penguins dataset
+- Palmer Penguins veri seti
 
-**Backend**
+**Arka Uç**
 - FastAPI
 - Uvicorn
 
-**Frontend**
+**Ön Yüz**
 - React
 - Vite
 - JavaScript
 - CSS
 
-## 🐧 Supported Species
+## 🐧 Desteklenen Türler
 
 - Adelie
 - Chinstrap
 - Gentoo
 
-## 🚀 Getting Started
+## 🧠 Model Eğitimi
 
-### 1. Clone the repository
+Model, PyTorch kullanılarak Palmer Penguins veri seti üzerinde eğitilmiştir. Eğitim süreci; veri ön işleme, özelliklerin hazırlanması, model eğitimi ve performans değerlendirmesini kapsar.
+
+📓 [Model eğitim not defterini inceleyin](https://github.com/rumeysakurtuloglu21-hub/penguin-classification/blob/main/notbook/penguin_classification.ipynb)
+
+## 🚀 Kurulum ve Çalıştırma
+
+### Gereksinimler
+
+- Python
+- Node.js ve npm
+- Git
+
+### 1. Depoyu klonlayın
 
 ```bash
-git clone YOUR_REPOSITORY_URL
-cd PenguenSınıflandırma
+git clone https://github.com/rumeysakurtuloglu21-hub/penguin-classification.git
+cd penguin-classification
 ```
 
-Replace `YOUR_REPOSITORY_URL` with your GitHub repository URL.
+### 2. Arka ucu çalıştırın
 
-### 2. Run the backend
-
-Navigate to the backend directory, activate your Python environment, install the required dependencies, and start the FastAPI server.
+Proje ana dizininden:
 
 ```bash
 cd backend
@@ -55,9 +68,9 @@ pip install -r requirements.txt
 uvicorn main:app --reload
 ```
 
-### 3. Run the frontend
+### 3. Ön yüzü çalıştırın
 
-Open a separate terminal:
+Yeni bir terminal açarak proje ana dizinindeki `frontend` klasörüne gidin:
 
 ```bash
 cd frontend
@@ -65,20 +78,15 @@ npm install
 npm run dev
 ```
 
-Open the local URL displayed by Vite in your browser.
+Vite tarafından gösterilen yerel adresi tarayıcınızda açın.
 
-## 📌 Project Status
+> Not: Arka uç ve ön yüzün birlikte çalışması için API adresinin ve CORS ayarlarının proje yapılandırmasıyla uyumlu olması gerekir.
 
-This project is developed as a machine learning and web development learning project.
+## 📌 Proje Durumu
 
-## 👩‍💻 Author
+Bu proje, PyTorch ile derin öğrenme ve eğitilmiş bir modelin FastAPI ve React kullanılarak web uygulamasına entegre edilmesi konularında pratik yapmak amacıyla geliştirilmiştir.
 
-Created as a personal machine learning project.
+## 👩‍💻 Yazar
 
-## Model Training
+Rümeysa Kurtuloğlu
 
-The model was trained using PyTorch and the Palmer Penguins dataset.
-
-The training notebook covers data preprocessing, model training, and evaluation.
-
-[View the training notebook](notbook/penguin_classification.ipynb)
